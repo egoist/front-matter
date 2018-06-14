@@ -1,6 +1,6 @@
 {
   "name": "@egoist/front-matter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Parse front-matter.",
   "repository": {
     "url": "egoist/front-matter",
@@ -37,6 +37,8 @@
   },
   "xo": {
     "extends": "rem",
-    "envs": ["jest"]
+    "envs": [
+      "jest"
+    ]
   }
 }
