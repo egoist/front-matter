@@ -1,0 +1,42 @@
+{
+  "name": "@egoist/front-matter",
+  "version": "0.0.0",
+  "description": "Parse front-matter.",
+  "repository": {
+    "url": "egoist/front-matter",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/front-matter.cjs.js",
+  "cdn": "dist/front-matter.js",
+  "unpkg": "dist/front-matter.js",
+  "jsdelivr": "dist/front-matter.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run lint && jest --env node",
+    "build": "bili --js buble --format cjs,umd --module-name frontMatter",
+    "lint": "xo",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.0.1",
+    "bili": "^3.1.2",
+    "eslint-config-rem": "^3.0.0",
+    "jest": "^23.1.0",
+    "regenerator-runtime": "^0.11.1",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "envs": ["jest"]
+  }
+}
