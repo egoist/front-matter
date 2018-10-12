@@ -5,7 +5,7 @@ export default (str, delimiter = '---') => {
 
   str = str.trim()
 
-  const RE = new RegExp(`^${delimiter}\\n+([\\s\\S]+)\\n+${delimiter}(?:\\n([\\s\\S]*))?$`)
+  const RE = new RegExp(`^${delimiter}[\\r|\\n]+([\\s\\S]+)[\\r|\\n]+${delimiter}(?:[\\r|\\n]([\\s\\S]*))?$`)
 
   const splits = str.split('\n')
   const unmatchResult = {
